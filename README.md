@@ -32,7 +32,7 @@ docker push <account_id>.dkr.ecr.<region>.amazonaws.com/group3-project-pipeline:
 
 This process enables the application to run on a scalable, managed service in AWS, without the need for you to handle the underlying infrastructure. Users can access the application via a web interface and adjust various parameters to get custom house price predictions.
 
-It needs permission to read model from s3 bucket. After having the permssion, you can find DNS names in Networking tab of ECS service.
+It needs permission to read model from s3 bucket. The model is stored in the S3 bucket named: **group-3-models**
 
 Our name for ECS service is **group3-ui**
 
