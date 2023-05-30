@@ -6,8 +6,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from PIL import Image
 
-# Set up logging
-logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def get_image_b64(image_path: str) -> str:
     """
