@@ -16,6 +16,22 @@ This README illustrates the process of deploying a House Price Prediction applic
 
 3. **Push the Docker Image to AWS ECR:** We then push the Docker image to AWS's Elastic Container Registry (ECR). ECR is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.
 
+We create two ECR repositories: **group3-project-pipeline** and **group3-project-ui**. The first repository is used to store the Docker image for the pipeline, while the second repository is used to store the Docker image for the web application. 
+
+For pipeline repo, you can view it on:
+https://github.com/ffyycc/team-3-pipeline
+
+Then, we tag the Docker image and push it to the ECR repository:
+
+```bash
+docker tag group3-project-pipeline:latest <account_id>.dkr.ecr.<region>.amazonaws.com/group3-project-pipeline:latest
+docker push <account_id>.dkr.ecr.<region>.amazonaws.com/group3-project-pipeline:latest
+```
+
 4. **Deploy the Docker Image on AWS ECS:** Finally, the Docker image is deployed to the Elastic Container Service (ECS), AWS's highly scalable, high performance container orchestration service. ECS allows you to easily run and scale containerized applications on AWS.
 
 This process enables the application to run on a scalable, managed service in AWS, without the need for you to handle the underlying infrastructure. Users can access the application via a web interface and adjust various parameters to get custom house price predictions.
+
+It needs permission to read model from s3 bucket. After having the permssion, you can find DNS names in Networking tab of ECS service.
+
+You can also view the application at the following URL: http://group3-ui-1338407947.us-east-2.elb.amazonaws.com/
