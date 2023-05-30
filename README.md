@@ -34,4 +34,6 @@ This process enables the application to run on a scalable, managed service in AW
 
 It needs permission to read model from s3 bucket. After having the permssion, you can find DNS names in Networking tab of ECS service.
 
+Our name for ECS service is **group3-ui**
+
 You can also view the application at the following URL: http://group3-ui-1338407947.us-east-2.elb.amazonaws.com/
