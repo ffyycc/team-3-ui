@@ -8,7 +8,6 @@ COPY src /app/src
 COPY requirements.txt /app/requirements.txt
 COPY interface.py /app/interface.py
 COPY config /app/config
-COPY data /app/data
 COPY .streamlit /app/.streamlit
 
 # install dependencies
